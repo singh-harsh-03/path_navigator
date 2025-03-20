@@ -1,7 +1,6 @@
 interface ObjectsProps {
   handleObjectClick: (e: React.MouseEvent<SVGPathElement>) => void;
   className?: string;
-  getObjectColor: (id: string) => string;
 }
 function Objects({ handleObjectClick, className }: ObjectsProps) {
   return (
@@ -11,7 +10,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         className={`${className} object`}
         d="M558.987 911.04l116.848.003-1.024 114.297-116.619.503.795-114.803z"
         onClick={handleObjectClick}
-        
+        fill="gray"
       />
       <path
         id="Ellora"

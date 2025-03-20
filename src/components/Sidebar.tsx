@@ -1,4 +1,4 @@
-import logo from "../assets/img/pathpal-logo.svg";
+//import logo from "../assets/img/pathpal-logo.svg";
 import { FiChevronRight } from "react-icons/fi";
 import { useContext, useEffect, useState } from "react";
 import {
@@ -23,7 +23,7 @@ function Sidebar() {
   ) as NavigationContextType;
   const { objects } = useContext(MapDataContext) as MapDataContextType;
   const [parsedObjects, setParsedObjects] = useState<ParsedObjects>({});
-  const [isRotating, setIsRotating] = useState(false);
+  //const [isRotating, setIsRotating] = useState(false);
   useEffect(() => {
     const groupedObjects = () => {
       const data: ParsedObjects = {};

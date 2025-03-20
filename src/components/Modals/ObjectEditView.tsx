@@ -1,7 +1,7 @@
-import { MapDataContext } from "@/pages/Map";
-import { MapDataContextType, ObjectItem } from "@/utils/types";
-import { useContext } from "react";
-import { FaTrashAlt } from "react-icons/fa";
+//import { MapDataContext } from "@/pages/Map";
+import {  ObjectItem } from "@/utils/types";
+//import { useContext } from "react";
+//import { FaTrashAlt } from "react-icons/fa";
 import { DialogBody, DialogHeader } from "../ui/Dialog";
 
 interface ObjectEditViewProps {
@@ -19,17 +19,17 @@ interface ObjectEditViewProps {
 
 function ObjectEditView({
   object,
-  editedCategoryId,
+   editedCategoryId,
   setEditedCategoryId,
   setNewCategoryModalOpen,
   editedObjectName,
   setEditedObjectName,
-  handleCategoryDelete,
-  editedObjectDescription,
-  setEditedObjectDescription,
+  // handleCategoryDelete,
+  // editedObjectDescription,
+  // setEditedObjectDescription,
   handleSaveChanges,
 }: ObjectEditViewProps) {
-  const { categories } = useContext(MapDataContext) as MapDataContextType;
+  //const { categories } = useContext(MapDataContext) as MapDataContextType;
 
   return (
     <>
