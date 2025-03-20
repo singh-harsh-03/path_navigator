@@ -46,7 +46,7 @@ function ObjectEditView({
               }
             }}
           >
-            {categories.map((category) => (
+            {/* {categories.map((category) => (
               <option key={category.id} value={category.id}>
                 {category.name}
               </option>
@@ -55,16 +55,16 @@ function ObjectEditView({
               value="new_category"
               onClick={() => setNewCategoryModalOpen(true)}
             >
-              + Neue Kategorie
-            </option>
+              + New Category
+            </option> */}
           </select>
 
-          <button
+          {/* <button
             className="text-red-500 cursor-pointer"
             onClick={() => handleCategoryDelete(editedCategoryId)}
           >
             <FaTrashAlt />
-          </button>
+          </button> */}
         </div>
       </DialogHeader>
       <DialogBody>
@@ -77,12 +77,12 @@ function ObjectEditView({
           disabled
           onChange={(e) => setEditedObjectName(e.target.value)}
         />
-        <textarea
+        {/* <textarea
           className="w-full mb-2 p-2 border border-gray-300 rounded resize-none"
           placeholder={object.desc}
           value={editedObjectDescription}
           onChange={(e) => setEditedObjectDescription(e.target.value)}
-        />
+        /> */}
 
         <button
           className="mt-4 text-green-500 cursor-pointer"

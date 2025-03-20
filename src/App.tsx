@@ -5,12 +5,11 @@ import "react-toastify/dist/ReactToastify.css";
 import "./styles/App.css";
 import Map from "./pages/Map";
 import { AdminContextType } from "./utils/types";
-import Loading from "./pages/Loading";
 import { Analytics } from "@vercel/analytics/react";
 export const AdminContext = createContext<AdminContextType | null>(null);
 function App() {
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense >
       <div className="flex flex-col relative w-full max-h-[100dvh]">
         <Routes>
           <Route path="/:postion?" element={<Map />} />

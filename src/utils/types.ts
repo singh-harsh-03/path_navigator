@@ -6,6 +6,8 @@ export interface ObjectItem {
   desc: string;
   categoryId: string;
   categoryName?: string;
+  capacity?: number;
+  availability?: string;
 }
 export interface Category {
   id: string;

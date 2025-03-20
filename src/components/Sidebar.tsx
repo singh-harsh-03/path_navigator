@@ -53,7 +53,7 @@ function Sidebar() {
 
   return (
     <aside className="flex flex-col rounded-none w-[35rem] h-screen p-3 bg-white shadow-xl shadow-gray-200 -translate-x-full transform transition-transform duration-150 ease-in lg:translate-x-0 lg:shadow-md ">
-      <header className="flex flex-col mb-4 pr-1 border-b py-2 w-full">
+      {/* <header className="flex flex-col mb-4 pr-1 border-b py-2 w-full">
         <a
           href="https://github.com/openindoormap/openindoormaps"
           target="_blank"
@@ -82,8 +82,8 @@ function Sidebar() {
               onClick={() => setIsRotating(true)}
               onAnimationEnd={() => setIsRotating(false)}
             />
-          </div>
-          <div className="flex flex-col">
+          </div> */}
+          {/* <div className="flex flex-col">
             <div className="flex flex-col">
               <p className="text-2xl font-semibold text-gray-900 pl-2">
                 PathPal
@@ -92,9 +92,9 @@ function Sidebar() {
                 Indoor-Navigation
               </p>
             </div>
-          </div>
-        </div>
-      </header>
+          </div> */}
+        {/* </div>
+      </header> */}
       <div className="overflow-auto h-full">
         {Object.keys(parsedObjects)
           .sort()
