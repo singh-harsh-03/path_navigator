@@ -19,10 +19,12 @@ export const MapDataContext = createContext<MapDataContextType | null>(null);
 function Map() {
   let [searchParams, setSearchParams] = useSearchParams();
   const defaultPosition = "v35";
+  const defaultPosition2 = "Sunderbans"
   const startPosition = searchParams.get("position") || defaultPosition;
+  const endPosition = searchParams.get("destination") ||defaultPosition2;
   const [navigation, setNavigation] = useState<Navigation>({
     start: startPosition,
-    end: "",
+    end: endPosition,
   });
   const [isEditMode, setIsEditMode] = useState<boolean>(false);
   const navigationValue: NavigationContextType = {
@@ -33,9 +35,25 @@ function Map() {
   };
 
   useEffect(() => {
-    setSearchParams({ position: navigation.start });
-  }, [navigation.start]);
+    setSearchParams({
+      position: navigation.start,
+      ...(navigation.end ? { destination: navigation.end } : {}), // Only include 'destination' if it's not empty
+    });
+  }, [navigation.start, navigation.end]);
+ // Update navigation state when URL changes
+  useEffect(() => {
+    const updatedStart = searchParams.get("position") || defaultPosition;
+    const updatedEnd = searchParams.get("destination") || defaultPosition2;
 
+    // Only update state if the URL values differ from the current state
+    if (updatedStart !== navigation.start || updatedEnd !== navigation.end) {
+      setNavigation({
+        start: updatedStart,
+        end: updatedEnd,
+      });
+    }
+  }, [searchParams]);
+  
   const mapData = useMapData();
   return (
     <MapDataContext.Provider value={mapData}>

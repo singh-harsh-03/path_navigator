@@ -19,7 +19,7 @@ export async function getObjectById(id: string): Promise<ObjectItem> {
     const response = await apiService.get(`/objects/${id}`);
     return response.data[0] as ObjectItem;
   } catch (error) {
-    console.error(`Error fetching object with ID ${id}:`, error);
+    //console.error(`Error fetching object with ID ${id}:`, error);
     const object = db.objects.find((obj) => obj.id === id);
     if (!object) {
       throw new Error(`Object with ID ${id} not found in local db.json`);
@@ -33,10 +33,10 @@ export async function getCategories(): Promise<Category[]> {
     const response = await apiService.get("/categories");
     return response.data as Category[];
   } catch (error) {
-    console.error(
-      "Error fetching categories from API, falling back to local db.json:",
-      error
-    );
+    // console.error(
+    //   "Error fetching categories from API, falling back to local db.json:",
+    //   error
+    // );
     return db.categories as Category[];
   }
 }

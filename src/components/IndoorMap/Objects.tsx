@@ -1,3 +1,5 @@
+import data from "../../assets/db.json";
+
 interface ObjectsProps {
   handleObjectClick: (e: React.MouseEvent<SVGPathElement>) => void;
   className?: string;
@@ -5,19 +7,40 @@ interface ObjectsProps {
 function Objects({ handleObjectClick, className }: ObjectsProps) {
   return (
     <g id="Objects">
+      
+      <g>
+        <rect
+          x={558}
+          y={911}
+          width={118}
+          height={116}
+          fill="green" // Background color
+        />
       <path
         id="Ajanta"
         className={`${className} object`}
         d="M558.987 911.04l116.848.003-1.024 114.297-116.619.503.795-114.803z"
         onClick={handleObjectClick}
-        fill="gray"
       />
+      <text
+        x={596}
+        y={970}
+        fontSize="14"
+        fill="black"
+        fontFamily="Arial, sans-serif"
+        style={{ pointerEvents: "none" }} // Ensures text doesn't block clicks
+      >
+        Ajanta
+      </text>
+      </g>
+      <g>
       <path
         id="Ellora"
         className={`${className} object`}
         d="M430.273 910.876l120.253.333-1.054 114.46-119.468.792.269-115.585z"
         onClick={handleObjectClick}
       />
+      </g>
       <path
         id="Saka"
         className={`${className} object`}
