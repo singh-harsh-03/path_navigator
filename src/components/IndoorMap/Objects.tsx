@@ -7,7 +7,7 @@ interface ObjectsProps {
 const get_color = (name: string) => {
   const obj = data.objects.find((obj) => obj.name === name);
   if (!obj || !obj.availability) return "white";
-  return obj.availability === "yes" ? "green" : "red";
+  return obj.availability === "yes" ? "#2fa71f" : "#f6776a";
 };
 function Objects({ handleObjectClick, className }: ObjectsProps) {
   return (
@@ -132,7 +132,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           onClick={handleObjectClick}
         />
         <text
-          x={722}
+          x={700}
           y={970}
           fontSize="14"
           fill="black"
@@ -158,7 +158,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           onClick={handleObjectClick}
         />
         <text
-          x={853}
+          x={825}
           y={970}
           fontSize="14"
           fill="black"
@@ -184,7 +184,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           onClick={handleObjectClick}
         />
         <text
-          x={986}
+          x={960}
           y={970}
           fontSize="14"
           fill="black"
@@ -236,7 +236,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           onClick={handleObjectClick}
         />
         <text
-          x={1017}
+          x={999}
           y={700}
           fontSize="14"
           fill="black"
@@ -288,7 +288,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           onClick={handleObjectClick}
         />
         <text
-          x={422}
+          x={402}
           y={700}
           fontSize="14"
           fill="black"
@@ -340,7 +340,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           onClick={handleObjectClick}
         />
         <text
-          x={782}
+          x={738}
           y={350}
           fontSize="14"
           fill="black"
@@ -522,7 +522,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           onClick={handleObjectClick}
         />
         <text
-          x={497}
+          x={433}
           y={110}
           fontSize="14"
           fill="black"
@@ -548,7 +548,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           onClick={handleObjectClick}
         />
         <text
-          x={664}
+          x={604}
           y={110}
           fontSize="14"
           fill="black"
@@ -574,8 +574,8 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           onClick={handleObjectClick}
         />
         <text
-          x={810}
-          y={100}
+          x={788}
+          y={110}
           fontSize="14"
           fill="black"
           fontFamily="Arial, sans-serif"
@@ -672,7 +672,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         <text
           x={1250}
           y={640}
-          fontSize="12"
+          fontSize="14"
           fill="black"
           fontFamily="Arial, sans-serif"
           style={{ pointerEvents: "none" }}
