@@ -7,7 +7,7 @@ interface ObjectsProps {
 const get_color = (name: string) => {
   const obj = data.objects.find((obj) => obj.name === name);
   if (!obj || !obj.availability) return "white";
-  return obj.availability === "yes" ? "#2fa71f" : "#f6776a";
+  return obj.availability === "yes" ? "#ccffcc" : "#ffad99";
 };
 function Objects({ handleObjectClick, className }: ObjectsProps) {
   return (
@@ -139,7 +139,8 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           fontFamily="Arial, sans-serif"
           style={{ pointerEvents: "none" }}
         >
-          Focus Room 4153
+          <tspan x={700} dy="0">Focus Room</tspan>
+          <tspan x={700} dy="16">4153</tspan>
         </text>
       </g>
       <g>
@@ -165,7 +166,9 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           fontFamily="Arial, sans-serif"
           style={{ pointerEvents: "none" }}
         >
-          Phone room 4128
+          <tspan x={825} dy="0">Phone Booth</tspan>
+          <tspan x={825} dy="16"> 4128</tspan>
+          
         </text>
       </g>
       <g>
@@ -191,7 +194,8 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           fontFamily="Arial, sans-serif"
           style={{ pointerEvents: "none" }}
         >
-          Phone Room 4120
+          <tspan x={960} dy="0">Phone Booth</tspan>
+          <tspan x={960} dy="16">4120</tspan>
         </text>
       </g>
       <g>
@@ -243,7 +247,8 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           fontFamily="Arial, sans-serif"
           style={{ pointerEvents: "none" }}
         >
-          Phone Booth 4063
+          <tspan x={999} dy="0">Phone Booth</tspan>
+          <tspan x={999} dy="16">4063</tspan>
         </text>
       </g>
       <g>
@@ -295,7 +300,9 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           fontFamily="Arial, sans-serif"
           style={{ pointerEvents: "none" }}
         >
-          Phone Booth 4173
+          <tspan x={402} dy="0">Phone Booth</tspan>
+          <tspan x={402} dy="16">4173</tspan>
+          
         </text>
       </g>
       <g>
@@ -529,7 +536,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           fontFamily="Arial, sans-serif"
           style={{ pointerEvents: "none" }}
         >
-          Meditation Room 4035
+          Meditation Room
         </text>
       </g>
       <g>
@@ -602,7 +609,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         />
         <text
           x={1000}
-          y={100}
+          y={110}
           fontSize="14"
           fill="black"
           fontFamily="Arial, sans-serif"
@@ -627,7 +634,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         d="M1105.14 34.92l155.263-.107.07 146.317-155.407.005.074-146.215z"
         onClick={handleObjectClick}
       />
-      <text x={1160} y={100} fontSize="14" fill="black" fontFamily="Arial, sans-serif" style={{ pointerEvents: "none" }}>SunderBans</text>
+      <text x={1160} y={110} fontSize="14" fill="black" fontFamily="Arial, sans-serif" style={{ pointerEvents: "none" }}>SunderBans</text>
       </g>
       <g>
         <rect
@@ -644,7 +651,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         d="M1269.109 35.006l105.412-.136.02 146.317-105.51.034.078-146.215z"
         onClick={handleObjectClick}
       />
-      <text x={1280} y={100} fontSize="14" fill="black" fontFamily="Arial, sans-serif" style={{ pointerEvents: "none" }}>Mahabalipuram</text>
+      <text x={1280} y={110} fontSize="14" fill="black" fontFamily="Arial, sans-serif" style={{ pointerEvents: "none" }}>Mahabalipuram</text>
       </g>
       
       <path
@@ -677,7 +684,8 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
           fontFamily="Arial, sans-serif"
           style={{ pointerEvents: "none" }}
         >
-          Manoranjan Room
+          <tspan x={1250} dy="0">Manoranjan</tspan>
+          <tspan x={1250} dy="16">Room</tspan>
         </text>
       </g>
 
