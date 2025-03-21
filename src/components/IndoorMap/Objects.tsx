@@ -6,7 +6,7 @@ interface ObjectsProps {
 }
 const get_color = (name: string) => {
   const obj = data.objects.find((obj) => obj.name === name);
-  if (!obj || !obj.availability) return "gray";
+  if (!obj || !obj.availability) return "white";
   return obj.availability === "yes" ? "green" : "red";
 };
 function Objects({ handleObjectClick, className }: ObjectsProps) {
